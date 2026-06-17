@@ -1,242 +1,325 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Sc. Romel Percy Melgarejo Bolivar | Perfil Profesional Ampliado</title>
-    <style>
-        :root {
-            --primary: #1e3a8a;
-            --secondary: #0284c7;
-            --dark: #1f2937;
-            --light: #f3f4f6;
-            --white: #ffffff;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 3.5rem 1rem 3rem 1rem;
-            text-align: center;
-            position: relative;
-        }
-        .header-content {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        @media (min-width: 600px) {
-            .header-content {
-                flex-direction: row;
-                text-align: left;
-                justify-content: center;
-            }
-        }
-        .profile-photo {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            background-color: #e5e7eb;
-        }
-        .header-text h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-        }
-        .header-text p {
-            font-size: 1.15rem;
-            opacity: 0.95;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            background-color: var(--white);
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.3rem;
-            margin-bottom: 1.2rem;
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-        }
-        ul {
-            list-style-type: none;
-        }
-        li {
-            margin-bottom: 1rem;
-            padding-left: 1.4rem;
-            position: relative;
-        }
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .badge {
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 0.3rem;
-        }
-        .project-title {
-            font-weight: bold;
-            color: var(--dark);
-        }
-        .pub-authors {
-            font-size: 0.9rem;
-            color: #4b5563;
-            font-style: italic;
-        }
-        .pub-meta {
-            font-size: 0.85rem;
-            color: #6b7280;
-            margin-top: 0.1rem;
-        }
-        footer {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-            border-top: 1px solid #e5e7eb;
-        }
-        .links-investigador {
-            margin-top: 0.8rem;
-        }
-        .links-investigador a {
-            color: var(--white);
-            text-decoration: underline;
-            margin: 0 0.5rem;
-            font-size: 0.9rem;
-            opacity: 0.85;
-        }
-        .links-investigador a:hover {
-            opacity: 1;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Cristian Joel Curmilluni Ancco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF6F0;
+    --surface:#FFFFFF;
+    --text:#3B362F;
+    --muted:#7C7165;
+    --accent:#C98B5C;
+    --accent-dark:#A86B45;
+    --accent-light:#F1E0D2;
+    --rule:#E8DCCB;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    font-size:13.5px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:740px;
+    margin:36px auto;
+    background:var(--surface);
+    border-radius:14px;
+    padding:46px 52px;
+    box-shadow:0 10px 30px rgba(59,54,47,0.08);
+  }
+  .cv-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:24px;
+    color:var(--accent-dark);
+    margin:0;
+    line-height:1.25;
+  }
+  .role{
+    margin:6px 0 0;
+    font-size:13px;
+    color:var(--text);
+    font-weight:500;
+  }
+  .contact{
+    text-align:left;
+    font-size:11.5px;
+    color:var(--muted);
+    max-width:255px;
+    overflow-wrap:anywhere;
+  }
+  .contact p{margin:2px 0;}
+  .contact a{color:var(--muted); text-decoration:none;}
+  .contact a:hover{color:var(--accent-dark);}
+  @media (max-width:520px){
+    .page{padding:32px 26px;}
+    .contact{text-align:left;}
+  }
+  .top-rule{
+    border:none;
+    border-top:1px solid var(--rule);
+    margin:26px 0;
+  }
+  .eyebrow{
+    font-size:10.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin:0 0 13px;
+  }
+  section{margin-bottom:28px;}
+  .profile p{
+    font-size:13px;
+    color:var(--text);
+    margin:0;
+  }
+  .timeline-item{
+    display:flex;
+    gap:14px;
+  }
+  .dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--accent);
+    margin-top:6px;
+    flex-shrink:0;
+  }
+  .timeline-content h3{
+    font-family:'Fraunces',serif;
+    font-size:14.5px;
+    font-weight:600;
+    margin:0 0 4px;
+    color:var(--text);
+  }
+  .meta{
+    font-size:11.5px;
+    color:var(--muted);
+    margin:0 0 6px;
+  }
+  .desc{
+    font-size:12.5px;
+    color:var(--text);
+    margin:0;
+  }
+  .skill-group{margin-bottom:13px;}
+  .skill-group:last-child{margin-bottom:0;}
+  .skill-label{
+    font-size:12px;
+    font-weight:600;
+    color:var(--text);
+    margin:0 0 8px;
+  }
+  .pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+  }
+  .pill{
+    background:var(--accent-light);
+    color:var(--accent-dark);
+    font-size:11.5px;
+    padding:4px 11px;
+    border-radius:999px;
+    font-weight:500;
+  }
+  .app-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .app-item{
+    display:flex;
+    gap:9px;
+    align-items:baseline;
+    flex-wrap:wrap;
+  }
+  .app-item::before{
+    content:'';
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--accent);
+    flex-shrink:0;
+    align-self:center;
+  }
+  .app-title{
+    font-size:12px;
+    font-weight:600;
+    color:var(--text);
+    margin:0;
+    flex-shrink:0;
+  }
+  .app-desc{
+    font-size:12px;
+    color:var(--muted);
+    margin:0;
+  }
+  .languages{
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+  }
+  .lang-item{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .lang-name{font-size:12.5px; font-weight:600; color:var(--text);}
+  .lang-level{font-size:11px; color:var(--muted);}
+  .dots{font-size:10px; letter-spacing:2px;}
+  .dot-fill{color:var(--accent);}
+  .dot-empty{color:var(--rule);}
+  .interest-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+  }
+  .interest-pill{
+    background:transparent;
+    border:1px solid var(--rule);
+    color:var(--text);
+    font-size:11.5px;
+    padding:4px 11px;
+    border-radius:999px;
+    font-weight:500;
+  }
+  footer{
+    text-align:center;
+    font-size:10.5px;
+    color:var(--muted);
+    margin-top:34px;
+    padding-top:16px;
+    border-top:1px solid var(--rule);
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-            <!-- Foto de Investigador enlazada directamente desde el repositorio oficial CTI Vitae del CONCYTEC -->
-            <img src="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=67043" alt="M.Sc. Romel Percy Melgarejo Bolivar" class="profile-photo">
-            <div class="header-text">
-                <h1>M.Sc. Romel Percy Melgarejo Bolivar</h1>
-                <p>Docente Universitario | Especialista en TI, Ciencia de Datos e Ingeniería Estadística e Informática</p>
-                <div class="links-investigador">
-                    <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=67043" target="_blank">Ficha Concytec</a> | 
-                    <a href="https://scholar.google.com/citations?user=G5veeOIAAAAJ" target="_blank">Google Académico</a>
-                </div>
-            </div>
+<div class="page">
+
+  <header class="cv-header">
+    <div class="identity">
+      <h1 class="name">Cristian Joel Curmilluni Ancco</h1>
+      <p class="role">Estudiante de Ingeniería Estadística e Informática</p>
+    </div>
+    <div class="contact">
+      <p>Puno, Perú</p>
+      <p><a href="tel:+51926325111">+51 926 325 111</a></p>
+      <p>Correo: <a href="mailto:crissjoelca@gmail.com">crissjoelca@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/cristian-joel-curmilluni-ancco-4a5637333/" target="_blank">https://www.linkedin.com/in/cristian-joel-curmilluni-ancco-4a5637333/</a></p>
+      <p>GitHub: <a href="https://github.com/crissjoelca-art" target="_blank">https://github.com/crissjoelca-art</a></p>
+    </div>
+  </header>
+
+  <hr class="top-rule">
+
+  <section class="profile">
+    <p class="eyebrow">Perfil</p>
+    <p>Estudiante de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano (Puno, Perú), con interés particular en el desarrollo de software y la inteligencia artificial. Tengo base práctica en análisis de datos y modelos de regresión, apoyándome en herramientas estadísticas y de gestión de bases de datos para abordar problemas desde un enfoque cuantitativo. Busco seguir fortaleciendo estas competencias en proyectos reales de análisis y desarrollo.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Formación académica</p>
+    <div class="timeline-item">
+      <span class="dot"></span>
+      <div class="timeline-content">
+        <h3>Ingeniería Estadística e Informática</h3>
+        <p class="meta">Universidad Nacional del Altiplano · Puno, Perú &nbsp;—&nbsp; 2023 - Actualidad</p>
+        <p class="desc">Formación orientada a la estadística aplicada, la programación y la gestión de bases de datos, con énfasis en el análisis de datos y la construcción de modelos predictivos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Habilidades técnicas</p>
+    <div class="skill-group">
+      <p class="skill-label">Análisis estadístico</p>
+      <div class="pills">
+        <span class="pill">Excel</span>
+        <span class="pill">Minitab</span>
+        <span class="pill">EViews</span>
+        <span class="pill">SPSS</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <p class="skill-label">Gestión de bases de datos</p>
+      <div class="pills">
+        <span class="pill">PostgreSQL</span>
+        <span class="pill">SQL</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <p class="skill-label">Áreas de aplicación</p>
+      <div class="app-list">
+        <div class="app-item">
+          <p class="app-title">Análisis de datos —</p>
+          <p class="app-desc">recolección, limpieza e interpretación de datos cuantitativos para identificar patrones y apoyar la toma de decisiones.</p>
         </div>
-    </header>
+        <div class="app-item">
+          <p class="app-title">Modelos de regresión —</p>
+          <p class="app-desc">construcción y evaluación de modelos de regresión lineal para explicar relaciones entre variables y generar predicciones a partir de datos.</p>
+        </div>
+        <div class="app-item">
+          <p class="app-title">Programación —</p>
+          <p class="app-desc">fundamentos de programación aplicados al procesamiento de datos y al desarrollo de pequeñas soluciones de software.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="container">
-        
-        <section id="sobre-mi">
-            <h2>Resumen Profesional</h2>
-            <p>Magíster Scientiae en Informática con mención en Gerencia de Tecnologías de Información y Comunicaciones por la Universidad Nacional del Altiplano. Profesional especializado en Ciencia de Datos, redes telemáticas, analítica probabilística y desarrollo avanzado de software. Cuenta con un destacado historial de registro de propiedad intelectual ante INDECOPI, liderazgo gremial y publicaciones científicas indexadas globalmente.</p>
-        </section>
+  <section>
+    <p class="eyebrow">Idiomas</p>
+    <div class="languages">
+      <div class="lang-item">
+        <span class="lang-name">Español</span>
+        <span class="lang-level">Nativo</span>
+        <span class="dots"><span class="dot-fill">●●●●●</span></span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Aymara</span>
+        <span class="lang-level">Intermedio</span>
+        <span class="dots"><span class="dot-fill">●●●</span><span class="dot-empty">●●</span></span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Inglés</span>
+        <span class="lang-level">Básico-Intermedio (en progreso)</span>
+        <span class="dots"><span class="dot-fill">●●</span><span class="dot-empty">●●●</span></span>
+      </div>
+    </div>
+  </section>
 
-        <section id="educacion">
-            <h2>Formación Académica</h2>
-            <ul>
-                <li>
-                    <strong>Magíster Scientiae en Informática</strong><br>
-                    Mención en Gerencia de Tecnologías de Información y Comunicaciones — Universidad Nacional del Altiplano
-                </li>
-                <li>
-                    <strong>Ingeniero Estadístico e Informático</strong><br>
-                    Título Profesional — Universidad Nacional del Altiplano
-                </li>
-                <li>
-                    <strong>Estudios de Especialización Tecnológica (En curso)</strong><br>
-                    Mecatrónica Automotriz — Instituto Superior Tecnológico José Antonio Encinas (Puno)
-                </li>
-            </ul>
-        </section>
+  <section>
+    <p class="eyebrow">Áreas de interés</p>
+    <div class="interest-row">
+      <span class="interest-pill">Desarrollo de software</span>
+      <span class="interest-pill">Inteligencia artificial</span>
+      <span class="interest-pill">Análisis de datos</span>
+    </div>
+  </section>
 
-        <section id="experiencia">
-            <h2>Experiencia Destacada</h2>
-            <ul>
-                <li>
-                    <strong>Docente Universitario e Investigador</strong> — Universidad Nacional del Altiplano Puno<br>
-                    <span class="badge">2020 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Presidente del Capítulo de Ingenieros Estadísticos e Informáticos</strong> — Colegio de Ingenieros del Perú (CD Puno)<br>
-                    <span class="badge">2022 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Auxiliar Ordinario</strong> — Universidad Nacional de Moquegua<br>
-                    <span class="badge">2015</span>
-                </li>
-                <li>
-                    <strong>Instructor Técnico</strong> — Instituto de Informática de la UNA Puno<br>
-                    <span class="badge">2016</span>
-                </li>
-            </ul>
-        </section>
+  <footer>
+    <p>Currículum Vitae · Cristian Joel Curmilluni Ancco</p>
+  </footer>
 
-        <section id="investigacion">
-            <h2>Producción Científica y Publicaciones</h2>
-            <ul>
-                <li>
-                    <strong>Artículo de Revista Internacional Indexada (2022):</strong><br>
-                    <span class="project-title">"A Lightweight Hybrid Dilated Ghost Model-Based Approach for the Prognosis of Breast Cancer"</span>
-                    <div class="pub-authors">E. Ramirez-Asis, R. P. Melgarejo Bolivar, L. A. Gonzales, S. Chaudhury, R. Kashyap, etc.</div>
-                    <div class="pub-meta">Revista: <em>Computational Intelligence and Neuroscience</em> | DOI: 10.1155/2022/9325452</div>
-                </li>
-                <li>
-                    <strong>Capítulo de Libro Técnico (2023):</strong><br>
-                    <span class="project-title">"Predicción de diabetes en mujeres mediante un modelo probabilístico basado en Redes Bayesianas"</span>
-                    <div class="pub-authors">Romel Percy Melgarejo Bolivar</div>
-                    <div class="pub-meta">Libro: <em>O Cuidado em Saúde Baseado em Evidências</em> | DOI: 10.37885/230412748</div>
-                </li>
-                <li>
-                    <strong>Artículo de Revista de Posgrado (2022):</strong><br>
-                    <span class="project-title">"Arquitectura pervasiva con tecnologías WebRTC híbridas para el desarrollo de un framework Modelo Vista Controlador de tiempo real"</span>
-                    <div class="pub-authors">Ramiro Pedro Laura Murillo, Romel Percy Melgarejo Bolivar</div>
-                    <div class="pub-meta">Revista: <em>Revista de Investigaciones de la Escuela de Posgrado UNA</em> | DOI: 10.26788/riepg.v9i4.1632</div>
-                </li>
-                <li>
-                    <strong>Libro / Monografía Académica (2015):</strong><br>
-                    <span class="project-title">"Red Privada Virtual para la Prestación de Servicios Multimedia en el Campus Universitario de la Universidad Nacional del Altiplano"</span>
-                    <div class="pub-meta">Repositorio Institucional UNA Puno | Código de Biblioteca: Facultad de Ingeniería Estadística e Informática</div>
-                </li>
-                <li>
-                    <strong>Artículo de Investigación en Ciencias Sociales (2019):</strong><br>
-                    <span class="project-title">"La comunicación interna en los trabajadores administrativos de la UNA Puno"</span>
+</div>
+
+</body>
+</html>
